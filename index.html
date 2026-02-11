@@ -98,10 +98,13 @@
 </head>
 <body>
   <div class="container">
-    <h1>Hiii Baby 💖</h1>
+    <h1>Hiii Baby ❤️</h1>
     <p>Allow me to tell you✨</p>
-    <p>That you are amazing and you make my world brighter every day ✨</p>
-        <p>Will you be my Valentine?👉👈 </p>
+    
+    <div id="word">
+        <p>That you are amazing and you make my world brighter every day ✨</p>
+    <p id="word">Will you be my Valentine?👉👈 </p>
+    </div>
 
     <div class="buttons">
       <button id="yesBtn">Yes 💘</button>
@@ -130,8 +133,11 @@
     yesBtn.addEventListener('click', () => {
       createConfetti();
       startHearts();
+      
       document.querySelector('h1').innerText = "Yaaay!!! ❤️";
-      document.querySelector('p').innerText = "You just made me the happiest guy alive 🥰";
+    //   document.querySelector('p').innerText = "";
+      document.querySelector('p').innerText = "You just made me the happiest guy alive 🥰 Screenshot and send it back🫶";
+      clearwords();
     });
 
     function createConfetti() {
@@ -145,6 +151,11 @@
 
         setTimeout(() => confetti.remove(), 3000);
       }
+    }
+
+    function clearwords(){
+        const word=document.getElementById("word");
+        word.remove()
     }
 
     function startHearts() {
